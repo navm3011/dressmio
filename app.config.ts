@@ -49,8 +49,8 @@ const config: ExpoConfig = {
   newArchEnabled: true,
   ios: {
     supportsTablet: true,
-    bundleIdentifier: com.dressmio.app,
-    buildNumber: "10010",
+    bundleIdentifier: "com.dressmio.app",
+    buildNumber: "10011",
     "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
         "NSCameraUsageDescription": "dressMio uses your camera to photograph clothing items in your wardrobe. For example, you can take a photo of a shirt, and our AI will automatically detect the item type, color, and style to organize it in your digital closet.",
