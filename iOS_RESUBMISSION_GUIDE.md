@@ -2,7 +2,23 @@
 
 Complete guide to generate and resubmit dressMio to the Apple App Store with the Apple-requested permission-string fix.
 
-> **Current authoritative status:** See [`IOS_RELEASE_STATUS.md`](./IOS_RELEASE_STATUS.md) first. The correction uses App Store version `1.0.8` and requires a new, higher iOS build number. A completed build is not the same as a TestFlight upload.
+> **Current authoritative status:** See [`IOS_RELEASE_STATUS.md`](./IOS_RELEASE_STATUS.md) first. Build `1.0.0 (10011)` was reviewed and rejected for an unused background-audio declaration and a broken Support URL. The next binary must remain marketing version `1.0.0` and use build `10012` or higher. A completed build is not the same as a TestFlight upload.
+
+---
+
+## August 30 rejection fixes
+
+The reviewed build `1.0.0 (10011)` declared `audio` in iOS `UIBackgroundModes`, although dressMio has no persistent background-audio feature. The unused `expo-audio` and `expo-video` configuration plugins and dependencies have been removed, including `supportsBackgroundPlayback: true`.
+
+The Support URL must be updated in App Store Connect to the functional page below:
+
+```text
+https://navm3011.github.io/dressmio/support.html
+```
+
+Open that URL in a private browser window before entering it in App Store Connect. In **Distribution → iOS App → Version 1.0 → App Information**, replace the temporary Manus Support URL and save the version.
+
+The next build must use marketing version `1.0.0` and build number `10012` or higher. The source configuration now uses `10012`.
 
 ---
 
@@ -86,7 +102,7 @@ If you have access to a Mac:
 1. **Go to https://appstoreconnect.apple.com**
 2. **Go to "My Apps" → "dressMio"**
 3. **Check "App Store" tab**
-4. **Look for the new corrected build under version 1.0.8**
+4. **Look for the new corrected build under version 1.0.0**
 5. **Wait for processing to finish** before adding the build to TestFlight or selecting it for App Review
 
 ---
@@ -99,14 +115,14 @@ Once the build is available in App Store Connect:
 2. **Go to "My Apps" → "dressMio"**
 3. **Click "App Store" tab**
 4. **Scroll to "Build" section**
-5. **Select the corrected build under version 1.0.8**
+5. **Select the corrected build under version 1.0.0**
 6. **Click "Select a build before you submit your app"**
 7. **Choose the new processed build from the list**
 8. **Scroll to top and click "Submit for Review"**
 9. **Review the submission details:**
    - ✅ App name: dressMio
-   - ✅ Version: 1.0.8
-   - ✅ Build: higher than the previously uploaded build
+   - ✅ Version: 1.0.0
+   - ✅ Build: 10012 or higher, and different from 10011
    - ✅ Permission strings: Updated
 10. **Click "Submit"**
 11. **Confirm submission** in the dialog

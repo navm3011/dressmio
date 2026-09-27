@@ -1,10 +1,10 @@
 # dressMio iOS Release Handoff
 
-**Last updated:** 2026-08-26
-**App Store version:** 1.0.8
+**Last updated:** 2026-08-30
+**App Store version:** 1.0.0
 **iOS bundle identifier:** `com.dressmio.app`
 **App Store Connect app ID:** `6771671395`
-**Purpose:** Track the Apple permission-string correction, preflight verification, and the remaining local release steps.
+**Purpose:** Track the Apple permission-string correction, the August 30 App Review fixes, preflight verification, and the remaining release steps.
 
 ## Submission failure diagnosed
 
@@ -22,6 +22,23 @@ Apple requested that the camera and photo-library purpose strings explain how dr
 
 These strings are embedded in the iOS binary at build time. A new binary must be generated after the configuration change; changing the source after an IPA has been built does not change that IPA.
 
+## August 30 App Review rejection and fixes
+
+Apple reviewed Version 1.0 build `10011` on an iPad Air 11-inch (M3) and identified two additional issues:
+
+1. The iOS binary declared `audio` in `UIBackgroundModes`, although dressMio has no persistent background-audio feature.
+2. The App Store Support URL was the temporary Manus URL `https://8888-io9m9piuz4tpigf7yijmw-e0c38688.us1.manus.computer`, which was not functional for reviewers.
+
+The release configuration now removes the unused `expo-audio` and `expo-video` plugins and dependencies. In particular, the prior `expo-video` setting `supportsBackgroundPlayback: true` has been removed. The app contains no imports of either package, so no user-facing audio feature was removed.
+
+A GitHub Pages support site is being prepared at:
+
+`https://navm3011.github.io/dressmio/support.html`
+
+Do not update App Store Connect until the repository changes have been pushed and the URL has been verified in a private browser window. Then update App Store Connect → **Distribution → iOS App → Version 1.0 → App Information → Support URL** with that address.
+
+The corrected binary should be marketing version `1.0.0` with a new unique build number such as `10012`; the marketing version remains `1.0.0`. The user has reported that build `10012` was already created and submitted, so verify that existing binary before creating any further build.
+
 ## Verified in the sandbox
 
 The following checks passed against the current repository state:
@@ -31,14 +48,17 @@ The following checks passed against the current repository state:
 | `pnpm install --frozen-lockfile` | Passed |
 | `pnpm exec tsc --noEmit` | Passed with 0 errors |
 | Full Vitest suite | Passed |
-| `pnpm exec expo config --json` | Passed; resolved version is `1.0.8` and all three permission strings are present |
-| `pnpm exec expo export --platform ios --output-dir /tmp/dressmio-ios-export --clear` | Passed; the iOS JavaScript bundle was generated successfully |
+| `pnpm exec expo config --json` | Passed; resolved version is `1.0.0` and all three permission strings are present |
+| `pnpm exec expo export --platform ios --output-dir /tmp/dressmio-ios-export` | Passed; the iOS JavaScript bundle was generated successfully |
+| Android JavaScript export | Passed before the iOS-only rejection fix |
+| Support page preview | Served HTTP 200 from `/support.html` |
+| Background audio config check | No `UIBackgroundModes` or `supportsBackgroundPlayback` setting remains in the release config |
 
 A native iOS archive was not run in the sandbox because it requires macOS and Xcode. The local Mac build remains the final native verification step.
 
 ## Build-number rule for the resubmission
 
-The successful corrected build is marketing version `1.0.8`. Keep the App Store marketing version at `1.0.8` for this release. Increase `ios.buildNumber` to a value higher than the last uploaded 1.0.8 build. The marketing version and build number are separate identifiers; do not infer the build number from `1.0.8`.
+The previously uploaded build `1.0.10 (10010)` was not eligible for the existing App Store version 1.0 because its marketing version was wrong. Build `1.0.0 (10011)` corrected the permission strings but was rejected for the separate background-audio and Support URL issues. The next corrected build must use marketing version `1.0.0` and a new unique iOS build number `10012` or higher. The marketing version and build number are separate identifiers; do not derive a marketing version from the build number.
 
 ## Local Mac release procedure
 
@@ -51,19 +71,15 @@ rm -rf node_modules
 pnpm install --frozen-lockfile
 pnpm exec tsc --noEmit
 pnpm exec expo config --json
-pnpm exec expo export --platform ios --output-dir /tmp/dressmio-ios-export --clear
+pnpm exec expo export --platform ios --output-dir /tmp/dressmio-ios-export
 ```
 
-Then create the signed IPA locally. Do not use `--auto-submit` on the first attempt; verify the IPA before uploading it:
+Because the iOS rejection fix changes native configuration and local Xcode may be older than the React Native toolchain, create the next signed IPA with an EAS cloud build. Do not use `--auto-submit` until the IPA has been verified:
 
 ```bash
-mkdir -p build-artifacts
-EAS_LOCAL_BUILD_ARTIFACTS_DIR="$PWD/build-artifacts" \
-EAS_LOCAL_BUILD_SKIP_CLEANUP=1 \
 npx --yes eas-cli@latest build \
   --platform ios \
-  --profile production \
-  --local
+  --profile production
 ```
 
 If the build succeeds, locate the artifact with:
@@ -86,7 +102,7 @@ After uploading, open App Store Connect → **My Apps** → **dressMio** → **T
 
 ## Current status to confirm on the Mac
 
-At the time this document was written, the completed build had not been uploaded to TestFlight: the EAS submission failed with App Store Connect error `-19000` because the IPA used the wrong bundle identifier. After rebuilding with `com.dressmio.app`, confirm the new upload in App Store Connect.
+Build `1.0.0 (10011)` was uploaded and reviewed by Apple on August 30, 2026. Apple rejected it because of the unused iOS background-audio declaration and the nonfunctional Support URL. Build `1.0.0 (10012)` was subsequently reported as created and submitted; confirm its processing status and ensure Version 1.0 is attached to build 10012 before resubmitting.
 
 ## References
 

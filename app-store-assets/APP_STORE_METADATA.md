@@ -11,7 +11,7 @@
 | **Category** | Lifestyle |
 | **Content Rating** | 4+ (All Ages) |
 | **Privacy Policy URL** | [To be provided] |
-| **Support URL** | [To be provided] |
+| **Support URL** | https://navm3011.github.io/dressmio/support.html |
 
 ---
 
@@ -93,7 +93,7 @@ dressmioapp@gmail.com
 
 ### Support Website
 ```
-https://dressmio.com/support
+https://navm3011.github.io/dressmio/support.html
 ```
 
 ### Contact Information
