@@ -133,7 +133,7 @@ Pricing:                     Free
 In-App Purchases:            None
 Subscription:                None
 
-Support Email:               support@dressmio.com
+Support Email:               dressmioapp@gmail.com
 Support Website:             https://dressmio.com/support
 Privacy Policy:              PRIVACY_POLICY.md (in project root)
 Marketing URL:               https://dressmio.com
@@ -242,7 +242,7 @@ Google Resources:
   - EAS Documentation: https://docs.expo.dev/build/setup
 
 dressMio Support:
-  - Email: support@dressmio.com
+  - Email: dressmioapp@gmail.com
   - Website: https://dressmio.com
   - Support: https://dressmio.com/support
 

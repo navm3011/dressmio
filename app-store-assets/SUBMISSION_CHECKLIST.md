@@ -16,7 +16,7 @@
 - [x] Category selected: **Lifestyle**
 - [x] Content rating completed: **4+ (All Ages)**
 - [x] Privacy policy written: **PRIVACY_POLICY.md**
-- [x] Support email configured: **support@dressmio.com**
+- [x] Support email configured: **dressmioapp@gmail.com**
 
 ### Branding & Assets
 - [x] App icon prepared: **1024x1024 PNG**
@@ -121,7 +121,7 @@
 - [x] Release date: **Automatic or specific date**
 
 ### Support Information
-- [x] Support email: **support@dressmio.com**
+- [x] Support email: **dressmioapp@gmail.com**
 - [x] Support website: **https://dressmio.com/support**
 - [x] Privacy policy URL: **[To be provided]**
 - [x] Marketing URL: **https://dressmio.com**

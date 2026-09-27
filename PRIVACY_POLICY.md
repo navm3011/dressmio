@@ -168,7 +168,7 @@ If you are a California resident, you have additional rights under the Californi
 - **Right to Opt-Out**: You can opt out of the sale or sharing of your personal information
 - **Right to Non-Discrimination**: We will not discriminate against you for exercising your CCPA rights
 
-To exercise these rights, contact us at: privacy@dressmio.com
+To exercise these rights, contact us at: dressmioapp@gmail.com
 
 ## 9. European Privacy Rights (GDPR)
 
@@ -182,7 +182,7 @@ If you are located in the European Union or United Kingdom, you have rights unde
 - **Right to Object**: Object to certain processing activities
 - **Right to Lodge a Complaint**: File a complaint with your local data protection authority
 
-To exercise these rights, contact us at: privacy@dressmio.com
+To exercise these rights, contact us at: dressmioapp@gmail.com
 
 ## 10. Third-Party Links
 
@@ -198,7 +198,7 @@ Your continued use of the App following the posting of revised Privacy Policy me
 
 If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
 
-**Email:** privacy@dressmio.com
+**Email:** dressmioapp@gmail.com
 
 **Mailing Address:**
 dressMio
@@ -240,6 +240,6 @@ Your information may be transferred to, stored in, and processed in countries ot
 
 ---
 
-**Questions?** Contact us at privacy@dressmio.com
+**Questions?** Contact us at dressmioapp@gmail.com
 
 *This Privacy Policy is provided in English. If there are any inconsistencies between the English version and translations in other languages, the English version shall prevail.*

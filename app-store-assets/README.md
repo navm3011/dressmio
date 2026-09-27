@@ -94,7 +94,7 @@ This folder contains all materials needed to submit dressMio to both the Apple A
 - [x] Full description prepared
 - [x] Keywords prepared (10 keywords)
 - [x] Privacy policy written
-- [x] Support email configured: support@dressmio.com
+- [x] Support email configured: dressmioapp@gmail.com
 - [x] Support website: https://dressmio.com/support
 
 ### ✅ Code Quality
@@ -133,7 +133,7 @@ This folder contains all materials needed to submit dressMio to both the Apple A
 - **iOS Bundle ID:** com.dressmio.app
 - **Android Package:** com.dressmio.app
 - **App Name:** dressMio
-- **Support Email:** support@dressmio.com
+- **Support Email:** dressmioapp@gmail.com
 
 ### Pricing
 - **iOS:** Free (no in-app purchases)
@@ -252,7 +252,7 @@ app-store-assets/
 - **EAS Documentation:** https://docs.expo.dev/build/setup
 
 ### dressMio Support
-- **Email:** support@dressmio.com
+- **Email:** dressmioapp@gmail.com
 - **Website:** https://dressmio.com
 - **Support:** https://dressmio.com/support
 

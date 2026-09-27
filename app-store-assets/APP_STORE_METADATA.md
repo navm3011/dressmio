@@ -88,7 +88,7 @@ Organize your wardrobe, save combinations, and maximize your style.
 
 ### Support Email
 ```
-support@dressmio.com
+dressmioapp@gmail.com
 ```
 
 ### Support Website
@@ -99,7 +99,7 @@ https://dressmio.com/support
 ### Contact Information
 ```
 dressMio Support
-Email: support@dressmio.com
+Email: dressmioapp@gmail.com
 Response Time: 24-48 hours
 ```
 
@@ -205,7 +205,7 @@ daily outfit selection. Enjoy!
 - [ ] Category selected: **Lifestyle**
 - [ ] Content rating completed: **4+**
 - [ ] Privacy policy URL provided
-- [ ] Support email configured: **support@dressmio.com**
+- [ ] Support email configured: **dressmioapp@gmail.com**
 - [ ] Screenshots uploaded (1242 x 2208 px)
 - [ ] App description added
 - [ ] Keywords added

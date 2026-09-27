@@ -130,7 +130,7 @@ fashion, wardrobe, outfit, AI, styling, closet, clothing, fashion assistant, out
 ```
 
 ### 4.4 Contact Information
-- **Support email:** support@dressmio.com
+- **Support email:** dressmioapp@gmail.com
 - **Support website:** https://dressmio.com/support
 - **Privacy policy:** [Your privacy policy URL]
 
